@@ -1,9 +1,10 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+from env import BUISNES_EMAIL, OPEN_PASSWORD
 
-EMAIL = "nitaybusines@gmail.com"
-PASSWORD = "ghlx gdms ridi qbdz"
+EMAIL = BUISNES_EMAIL
+PASSWORD = OPEN_PASSWORD
 
 url = "https://www.amazon.com.tr/SanDisk-SDSSDA-240G-G26-SSD-Plus-240GB/dp/B07621PNWC/ref=sr_1_1?keywords=ssd%2B240" \
       "%2Bgb&qid=1658063784&sprefix=ssd%2B%2Cspecialty-aps%2C108&sr=8-1&th=1"

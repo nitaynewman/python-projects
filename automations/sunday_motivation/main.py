@@ -1,10 +1,11 @@
 import smtplib
 import datetime as dt
 import random
+from env import BUISNES_EMAIL, OPEN_PASSWORD, MY_EMAIL
 
-MY_EMAIL = 'nitaybusines@gmail.com'
-MY_PASSWORD = 'ghlx gdms ridi qbdz'
-TO_EMAIL = 'nitaynewman@gmail.com'
+FROM_EMAIL = BUISNES_EMAIL
+MY_PASSWORD = OPEN_PASSWORD
+TO_EMAIL = MY_EMAIL
 
 now = dt.datetime.now()
 weekday = now.weekday()
@@ -16,9 +17,9 @@ if weekday == 0:
     print(quote)
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
         connection.starttls()
-        connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+        connection.login(user=FROM_EMAIL, password=MY_PASSWORD)
         connection.sendmail(
-            from_addr=MY_EMAIL,
+            from_addr=FROM_EMAIL,
             to_addrs=TO_EMAIL,
             msg=f'Subject: Sunday Motivation\n\n{quote}'.encode('utf-8')  # Encoding the message using UTF-8
         )

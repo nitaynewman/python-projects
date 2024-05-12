@@ -1,14 +1,15 @@
 import requests
 from datetime import datetime
+from env import PIXEL_TOKEN, PIXEL_USERNAME, PIXEL_GRAPH_ID
 
 '''
     goes to pixel sight and then enters your number of km u ran.
 '''
 
 pixela_ep = 'https://pixe.la/v1/users'
-my_token = 'nitaynewman2001'
-USERNAME = 'nitaynewman'
-GRAPH_ID = 'graph1'
+my_token = PIXEL_TOKEN
+USERNAME = PIXEL_USERNAME
+GRAPH_ID = PIXEL_GRAPH_ID
 # ----------------------- FIRST STEP ----------------------- #
 # creating a new profile
 '''user_param = {
@@ -40,7 +41,6 @@ gragh_ep = f'{pixela_ep}/{USERNAME}/graphs'
 response2 = requests.post(url=gragh_ep, json=graph_param, headers=headers)
 print(response2.text)
 '''
-# to go to gragh - https://pixe.la/v1/users/nitaynewman/graphs/graph1.html
 
 # ----------------------- THIRD STEP ----------------------- #
 # creating pixels on the gragh (post)

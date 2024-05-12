@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import smtplib
+from env import MY_EMAIL, MY_PASSWORD
 
 # Function to get the price from the AliExpress page
 def get_price(url):
@@ -24,17 +25,17 @@ if price is not None:
     print("Current price:", price)
 
     # Sending email notification if the price is below a certain threshold
-    MY_EMAIL = 'mitaynewman@gmail.com'
-    MY_PASSWORD = 'nitay2k1'
+    EMAIL = MY_EMAIL
+    PASSWORD = MY_PASSWORD
     BUY_PRICE_THRESHOLD = 100  # Set your desired threshold
 
     if price < BUY_PRICE_THRESHOLD:
         with smtplib.SMTP('smtp.gmail.com', port=587) as connection:
             connection.starttls()
-            connection.login(user=MY_EMAIL, password=MY_PASSWORD)
+            connection.login(user=EMAIL, password=PASSWORD)
             connection.sendmail(
-                from_addr=MY_EMAIL,
-                to_addrs=MY_EMAIL,
+                from_addr=EMAIL,
+                to_addrs=EMAIL,
                 msg=f'Subject: Price Drop Alert!\n\nThe price of the product has dropped below {BUY_PRICE_THRESHOLD}₪.\nCurrent Price: {price}₪.\n\nCheck it out here: {URL}'
             )
             print("Email notification sent!")
