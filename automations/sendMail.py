@@ -1,7 +1,8 @@
 import smtplib
+from env import BUISNES_EMAIL, OPEN_PASSWORD
 
-MY_EMAIL = "nitaybusines@gmail.com"
-PASSWORD = 'ghlx gdms ridi qbdz'
+MY_EMAIL = BUISNES_EMAIL
+PASSWORD = OPEN_PASSWORD
 connection = smtplib.SMTP("smtp.gmail.com", 587)
 connection.starttls()
 connection.login(user=MY_EMAIL, password=PASSWORD)

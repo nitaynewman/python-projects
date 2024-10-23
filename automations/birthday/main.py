@@ -2,12 +2,18 @@ import smtplib
 import datetime as dt
 import random
 import pandas
-from env import MY_EMAIL
+from .env import MY_EMAIL
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
 MY_EMAIL = MY_EMAIL
 MY_PASSWORD = 'ghlx gdms ridi qbdz'
+from .env import BUISNES_EMAIL, OPEN_PASSWORD
+
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+MY_EMAIL = BUISNES_EMAIL
+MY_PASSWORD = OPEN_PASSWORD
 NOW = (dt.datetime.now().month, dt.datetime.now().day)
 
 data = pandas.read_csv('birthdays.csv')

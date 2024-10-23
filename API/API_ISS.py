@@ -3,6 +3,7 @@ from datetime import datetime
 import smtplib
 import pytz
 import time
+from env import BUISNES_EMAIL, OPEN_PASSWORD, MY_EMAIL
 
 MY_LAT = 1.7075  # Your latitude
 MY_LONG = 2.215  # Your longitude
@@ -54,7 +55,7 @@ while True:
     if is_iss_overhead() and is_night():
         connection = smtplib.SMTP('smtp.gmail.com')
         connection.starttls()
-        connection.login('nitaybusines@gmail.com', 'ghlx gdms ridi qbdz')
-        connection.sendmail(from_addr='nitaybusines@gmail.com', to_addrs='nitaynewman@gmail.com',
+        connection.login(BUISNES_EMAIL, OPEN_PASSWORD)
+        connection.sendmail(from_addr=BUISNES_EMAIL, to_addrs=MY_EMAIL,
                             msg='Subject: Look Up \n\nThe ISS is overhead!')
         connection.close()

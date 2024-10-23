@@ -3,6 +3,7 @@ from tkinter import messagebox
 from random import choice, randint, shuffle
 import pyperclip
 import json
+from env import MY_EMAIL
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
@@ -103,7 +104,7 @@ search_button.grid(row=1, column=2)
 
 user_entry = Entry(width=35)
 user_entry.grid(row=2, column=1, columnspan=2)
-user_entry.insert(0, 'nitaynewman@gmail.com')
+user_entry.insert(0, MY_EMAIL)
 
 password_entry = Entry(width=22)
 password_entry.grid(row=3, column=1)

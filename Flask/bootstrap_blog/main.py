@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import smtplib
 import requests
+from env import MY_EMAIL, MY_PASSWORD
 
 # the link to the json data: https://www.npoint.io/docs/086dce16d96c242c69ed
 posts = requests.get('https://api.npoint.io/086dce16d96c242c69ed').json()
@@ -18,8 +19,8 @@ def get_all_posts():
 def about():
     return render_template("about.html")
 
-PASSWORD = 'nitay2k1'
-EMAIL = 'nitaynewman@gmail.com'
+PASSWORD = MY_PASSWORD
+EMAIL = MY_EMAIL
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
