@@ -2,10 +2,11 @@ import smtplib
 import datetime as dt
 import random
 import pandas
+from env import MY_EMAIL
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
-MY_EMAIL = 'nitaybusines@gmail.com'
+MY_EMAIL = MY_EMAIL
 MY_PASSWORD = 'ghlx gdms ridi qbdz'
 NOW = (dt.datetime.now().month, dt.datetime.now().day)
 

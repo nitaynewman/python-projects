@@ -1,0 +1,8 @@
+In this I downloaded a llm model from ollama.
+How to download a model: 
+go to 'https://ollama.com/download' and download the ollama to the oporation system you have
+after that got to the Models on the top right corner and look for a model you wold like
+in this projects i used the 'phi3' model.
+after that open a command prompt and run this command "ollama pull {your-model}"
+it will download the llm you choose the run "ollama run {your-model}"
+then it will start your llm you can 
