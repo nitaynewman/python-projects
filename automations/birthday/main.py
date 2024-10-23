@@ -2,7 +2,13 @@ import smtplib
 import datetime as dt
 import random
 import pandas
-from env import BUISNES_EMAIL, OPEN_PASSWORD
+from .env import MY_EMAIL
+
+SMTP_SERVER = 'smtp.gmail.com'
+SMTP_PORT = 587
+MY_EMAIL = MY_EMAIL
+MY_PASSWORD = 'ghlx gdms ridi qbdz'
+from .env import BUISNES_EMAIL, OPEN_PASSWORD
 
 SMTP_SERVER = 'smtp.gmail.com'
 SMTP_PORT = 587
