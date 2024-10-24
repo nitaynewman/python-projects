@@ -1,14 +1,1 @@
-api/pixel - 404 - page not found
-Api/Stock - change from twlio to watkit and check if works
-scraping/spotify - need to check
-scraping/Apartments_Find - need to check
-selenium/tinder - need to check
-(flask/books - adding css) 
-automations/email - fixing the email ep 38
-automations/sunday_motivation - fixing the email ep 38
-win + g = guess the state, password,
-api_iss - need to do in the daylight
-
-
-
 
